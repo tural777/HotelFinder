@@ -10,11 +10,18 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:HotelFinder.API.Controllers.HotelsController.Get(System.Int32)">
+        <member name="M:HotelFinder.API.Controllers.HotelsController.GetHotelById(System.Int32)">
             <summary>
             Get Hotel By Id
             </summary>
             <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelFinder.API.Controllers.HotelsController.GetHotelByName(System.String)">
+            <summary>
+            Get Hotel By Name
+            </summary>
+            <param name="name"></param>
             <returns></returns>
         </member>
         <member name="M:HotelFinder.API.Controllers.HotelsController.Post(HotelFinder.Entities.Hotel)">

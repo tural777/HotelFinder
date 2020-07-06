@@ -39,9 +39,28 @@ namespace HotelFinder.API.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        [Route("[action]/{id}")]
+        public IActionResult GetHotelById(int id)
         {
             var hotel = _hotelService.GetHotelById(id);
+
+            if (hotel != null)
+                return Ok(hotel); // 200 + data
+
+            return NotFound(); // 404
+        }
+
+
+        /// <summary>
+        /// Get Hotel By Name
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        [HttpGet("{id}")]
+        [Route("[action]/{name}")]
+        public IActionResult GetHotelByName(string name)
+        {
+            var hotel = _hotelService.GetHotelByName(name);
 
             if (hotel != null)
                 return Ok(hotel); // 200 + data
